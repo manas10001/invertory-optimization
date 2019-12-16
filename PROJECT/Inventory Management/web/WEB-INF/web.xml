@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+    <servlet>
+        <servlet-name>Ulogin</servlet-name>
+        <servlet-class>Users.Ulogin</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Ucreation</servlet-name>
+        <servlet-class>Users.Ucreation</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ChangePass</servlet-name>
+        <servlet-class>Users.ChangePass</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Ulogin</servlet-name>
+        <url-pattern>/Ulogin</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Ucreation</servlet-name>
+        <url-pattern>/Ucreation</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ChangePass</servlet-name>
+        <url-pattern>/ChangePass</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    
+    <listener>
+       <listener-class> 
+            processing.Schedule
+        </listener-class>
+   </listener>
+    
+</web-app>
